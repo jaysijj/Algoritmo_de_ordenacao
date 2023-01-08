@@ -2,7 +2,7 @@
 
 <div  align=center >
     
-Author | Jaime Jaysi
+Autor | Jaime Jaysi
 ------ | :----------------
 Github | [github.com/jaysijj](https://github.com/jaysijj)
     
