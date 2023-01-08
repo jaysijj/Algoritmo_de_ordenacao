@@ -1,8 +1,14 @@
-<div align=center><h1>Ordenação de dados em Python</h1></div>
 
+
+<div  align=center >
+    
 Author | Jaime Jaysi
 ------ | :----------------
 Github | [github.com/jaysijj](https://github.com/jaysijj)
+    
+</div>
+<div align=center><h1>Ordenação de dados em Python</h1></div>
+
 
 Ordenação é um dos algoritmos mais  estudados pela ciência da computação. Existem diferentes métodos de ordenação que você pode utilizar no seu código para torná-lo mais eficiênte e efetivo.
 Você pode usar métodos de ordenação para solucionar os seguintes problemas:
