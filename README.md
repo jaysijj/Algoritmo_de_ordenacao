@@ -4,8 +4,6 @@ Author | Jaime Jaysi
 ------ | :----------------
 Github | [github.com/jaysijj](https://github.com/jaysijj)
 
-## Neste Tutorial você vai aprender:
-
 Ordenação é um dos algoritmos mais  estudados pela ciência da computação. Existem diferentes métodos de ordenação que você pode utilizar no seu código para torná-lo mais eficiênte e efetivo.
 Você pode usar métodos de ordenação para solucionar os seguintes problemas:
 
