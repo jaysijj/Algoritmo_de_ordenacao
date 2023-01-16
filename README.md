@@ -11,11 +11,11 @@ Github | [github.com/jaysijj](https://github.com/jaysijj)
 
 
 Ordenação é um dos algoritmos mais  estudados pela ciência da computação. Existem diferentes métodos de ordenação que você pode utilizar no seu código para torná-lo mais eficiênte e efetivo.
-Você pode usar métodos de ordenação para solucionar os seguintes problemas:
+Você pode usar métodos de ordenação para solucionar ou auxiliar na resolução dos seguintes problemas:
 
-* Procura itens de uma lista mais facilmente se ela estiver ordenada;
-* Selecionar itens de uma lista baseado no relacionamento com o resto dos items é mais fácil se os dados estiverem ordenados;
-* Procurar valores duplicados em uma lista pode ser feito de maneira mais rápida;
+* Procurar itens de uma lista mais facilmente;
+* Selecionar itens de uma lista baseado no relacionamento com o resto dos items;
+* Procurar valores duplicados em uma lista, pode ser feito de maneira mais rápida;
 * Analizar a frequência de distribuição dos itens em uma lista de maneira mais rápida.
 
 ## Quais métodos serão apresentados aqui:
@@ -28,7 +28,7 @@ Você pode usar métodos de ordenação para solucionar os seguintes problemas:
 
 ## Método "sorted"
 
-Devido Python ser uma linguagem de programação de alto nível, já existe uma função pronta capaz de realizar a ordenação dos dados dentro de uma lista, esta função é a "sorted()". Aqui temos um exemplo de como usar a função "sorted()":
+Devido Python ser uma linguagem de programação de alto nível, já existe um método pronta capaz de realizar a ordenação dos dados dentro de uma lista, este método é o "sorted()". Aqui temos um exemplo de como usar o método "sorted()":
 
 ```
     >>> sorted([9, 1, 5, 2, 7, 0])
@@ -38,7 +38,7 @@ Devido Python ser uma linguagem de programação de alto nível, já existe uma 
 ## Método "sort"
 
 
-Você também pode usar a função "x.sort()", onde x indica a lista que irá ser ordenada. A diferente entre o "sort()" e o "sorted()" é que no "sorted()" não altera a lista original, já o "sort()" altera a lista original.
+Você também pode usar o método "x.sort()", onde x indica a lista que irá ser ordenada. A diferente entre o "sort()" e o "sorted()" é que no "sorted()" não altera a lista original, já o "sort()" altera a lista original.
 
 ```
     >>> lista = [9, 1, 5, 2, 7, 0]
