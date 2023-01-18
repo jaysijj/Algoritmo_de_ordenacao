@@ -145,7 +145,7 @@ Para implementar o "Merge Sort" vamos precisar definir duas funções.
                 right=merge_sort(array[midpoint:]))
 ```
 
-- A segunda é para ordenar cada metade de forma recursiva: 
+- A segunda é para ordenar cada metade: 
 
 ```
         def merge(left, right):
