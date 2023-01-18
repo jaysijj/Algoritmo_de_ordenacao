@@ -121,45 +121,65 @@ Assim como o "bubble sort", o algoritmo de inserção é simples de implementar 
 Para entender apropriadamente a abordagem de "dividir e conquistar", você tem que entender primeiro o conceito de recursividade. Recursividade envolve na quebra de um problema gerando subproblemas menores até eles ficarem pequenos o suficiente para serem trabalhados. Na programação, recursividade é usualmente expresso como uma função chamando a sí mesma.
 
 A abordagem de "Dividir e conquistar" tipicamente segue uma mesma estrutura:
-1. O valor original inputado é quebrado em vária spartes, cada um repreentando um subproblema similar ao original;
+1. O valor original inputado é quebrado em várias partes, cada um repreentando um subproblema similar ao original;
 2. Cada subproblema é resolvido por recursividade;
 3. A solução para todos os problemas são combinadas em uma única solução.
 
-No caso do "Merge Sort", a abordagem de "Dividir e conquistar" divide um conjunto de valores entrada em duas partes iguais, classifica cada metade de forma recursiva e finaliza mesclando essas duas partes em uma única lista organizada.
+No caso do "Merge Sort", a abordagem de "Dividir e conquistar" divide um conjunto de valores de entrada em duas partes iguais, classifica cada metade de forma recursiva e finaliza mesclando essas duas partes em uma única lista organizada.
+
+Para implementar o "Merge Sort" vamos precisar definir duas funções.
+
+- A Primeira é para divir o array em duas metades iguais:
 
 ```
-    def merge(left, right):
-        # Se o primeiro array estiver vazio, não vai precisar ser feito o "merged" e você pode retornar o segundo array como resultado.
-        if len(left) == 0:
-            return right
+        def merge_sort(array):
+            # Se o array de entrada conter menos de dois elementos, então retorna como o resultado da função
+            if len(array) < 2:
+                return array
 
-        # Se o segundo array estiver vazio, então não precisa ser feito o "merged" e você pode retornar o primeiro array como resultado.
-        if len(right) == 0:
-            return left
+            midpoint = len(array) // 2
 
-        result = []
-        index_left = index_right = 0
+            # Classifica o array dividindo recursivamente os valores de entrada em duas metades iguais, organizando cada metade e mesclando para chegar em um resultado final.
+            return merge(
+                left=merge_sort(array[:midpoint]),
+                right=merge_sort(array[midpoint:]))
+```
 
-        # Agora percorra dentro de ambos os arrays atá que todos os elementos criem um array resultante.
-        while len(result) < len(left) + len(right):
-            # Os elementos precisam ser classificados para adicioná-los para o array resultante, você precisa decidir se pega o elemento mais próximo do primeiro ou do segundo array. 
-            if left[index_left] <= right[index_right]:
-                result.append(left[index_left])
-                index_left += 1
-            else:
-                result.append(right[index_right])
-                index_right += 1
+- A segunda é para ordenar cada metade de forma recursiva: 
 
-            # Se você chegar ao final de qualquer array, então você pode adicionar os elementos restantes de outro array ao resultado e interromper o loop.
-            if index_right == len(right):
-                result += left[index_left:]
-                break
+```
+        def merge(left, right):
+            # Se o primeiro array estiver vazio, não vai precisar ser feito o "merged" e você pode retornar o segundo array como resultado.
+            if len(left) == 0:
+                return right
 
-            if index_left == len(left):
-                result += right[index_right:]
-                break
+            # Se o segundo array estiver vazio, então não precisa ser feito o "merged" e você pode retornar o primeiro array como resultado.
+            if len(right) == 0:
+                return left
 
-        return result
+            result = []
+            index_left = index_right = 0
+
+            # Agora percorra dentro de ambos os arrays atá que todos os elementos criem um array resultante.
+            while len(result) < len(left) + len(right):
+                # Os elementos precisam ser classificados para adicioná-los para o array resultante, você precisa decidir se pega o elemento mais próximo do primeiro ou do segundo array.
+                if left[index_left] <= right[index_right]:
+                    result.append(left[index_left])
+                    index_left += 1
+                else:
+                    result.append(right[index_right])
+                    index_right += 1
+
+                # Se você chegar ao final de qualquer array, então você pode adicionar os elementos restantes de outro array ao resultado e interromper o loop.
+                if index_right == len(right):
+                    result += left[index_left:]
+                    break
+
+                if index_left == len(left):
+                    result += right[index_right:]
+                    break
+
+            return result
 ```
   
   
