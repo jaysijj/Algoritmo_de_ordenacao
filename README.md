@@ -187,3 +187,10 @@ Para implementar o "Merge Sort" vamos precisar definir duas funções.
 <img src='https://www.simplilearn.com/ice9/free_resources_article_thumb/mergesort/merge_sort-what-img1.png' alt='Algoritmo de Merge Sort na prática' style='width:500px; text-align:center;'/>
 <p>Algoritmo de Merge Sort na prática</p>
 </div>
+
+<br><br><br>
+
+#### Referências:
+1. https://levelup.gitconnected.com/big-o-notation-bubble-search-in-unity-c90ca1f608d0
+2. https://brilliant.org/wiki/heap-sort/
+3. https://realpython.com/sorting-algorithms-python/#the-merge-sort-algorithm-in-python
